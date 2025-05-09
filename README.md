@@ -90,6 +90,61 @@ npm start
 
 We welcome contributions from the community! Please follow these guidelines to ensure a smooth collaboration process.
 
+You're absolutely right! Let me enhance the **Contributing** section with clear branch management guidelines. Here's the improved version:
+
+---
+
+## Contributing
+
+We welcome contributions from the community! Please follow these guidelines to ensure a smooth collaboration process.
+
+### Branch Workflow
+
+1. **Always create a new branch** for your work:
+   ```bash
+   git checkout -b feat/add-student-profile
+   ```
+   or for bug fixes:
+   ```bash
+   git checkout -b fix/attendance-date-calculation
+   ```
+
+2. **Naming conventions** for branches:
+   - Feature branches: `feat/description` (e.g., `feat/student-dashboard`)
+   - Bug fixes: `fix/description` (e.g., `fix/login-validation`)
+   - Documentation: `docs/description` (e.g., `docs/contributing-guide`)
+   - Chores: `chore/description` (e.g., `chore/dependency-update`)
+
+3. **Push your branch** to the remote repository:
+   ```bash
+   git push origin your-branch-name
+   ```
+
+4. **Create a Pull Request (PR)** from your branch to `main`:
+   - Go to GitHub repository > Pull Requests > New Pull Request
+   - Select `main` as base branch and your branch as compare branch
+   - Follow the PR template (if available)
+   - Request reviews from relevant team members
+
+5. **Never push directly to `main` branch** - all changes must go through PR review.
+
+### PR Approval Process
+1. Two approved reviews required before merging
+2. All CI checks and test must pass
+3. Resolve all code review comments before merging
+4. Squash merge preferred (maintains clean commit history)
+
+### Syncing Your Branch
+If your branch falls behind `main`:
+```bash
+git checkout main
+git pull origin main
+git checkout your-branch-name
+git merge main
+# Resolve any conflicts, then push
+git push origin your-branch-name
+```
+
 ### Commit Message Guidelines
 
 We follow [Conventional Commits](https://www.conventionalcommits.org/) specification. Your commit messages must follow this format:
@@ -195,8 +250,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Happy Coding!** 🚀
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -211,3 +264,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+**Happy Coding!** 🚀
