@@ -1,7 +1,5 @@
 # Student Management System
 
-![Project Banner](https://via.placeholder.com/1200x400?text=Student+Management+System) <!-- Replace with actual banner image -->
-
 A comprehensive web-based platform designed to enhance the academic experience for university and college students by providing a centralized hub for managing various aspects of student life.
 
 ## Table of Contents
@@ -55,7 +53,7 @@ A comprehensive web-based platform designed to enhance the academic experience f
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-org/student-management-system.git
+   git clone https://github.com/90-Days-of-Coding/sms-frontend.git
    cd student-management-system
    ```
 
@@ -181,9 +179,9 @@ sms-frontend/
 ├── components/
 │   └── (shadcn components will be here)
 ├── lib/
-│   ├── constants.ts
-│   ├── hooks/
-│   ├── providers.tsx
+│   ├── constants.ts (to be set-up)
+│   ├── hooks/ (to be set-up)
+│   ├── providers.tsx (to be set-up)
 │   └── utils.ts
 ├── stores/
 │   └── (zustand stores will be here)
