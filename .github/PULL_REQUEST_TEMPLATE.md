@@ -2,7 +2,8 @@
 
 ## Description
 
-<!-- Clearly describe what this PR accomplishes. Include screenshots if applicable. -->
+Initialized a new nextjs app
+installed all dependencies from tech stack
 
 ## Related Issues
 
