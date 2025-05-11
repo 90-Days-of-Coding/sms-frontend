@@ -12,6 +12,7 @@ export default function Home() {
           height={38}
           priority
         />
+        <button className="btn btn-accent text-[1.2rem]">Hafa</button>
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
