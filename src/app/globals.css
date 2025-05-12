@@ -1,0 +1,22 @@
+/*
+Do not define styles here, or perform any changes without any of the admins permission
+*/
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* theming */
+@plugin "daisyui" {
+  themes: winter --default, black --prefersdark;
+}
+
+@theme {
+
+  --text-base: '1rem';
+  --text-sm: '1.25rem';
+  --text-md: '1.75rem';
+  --text-lg: '1.5rem';
+  --text-xl: '2rem';
+  --text-2xl: 'calc(1.5rem + 1vw)';
+
+}

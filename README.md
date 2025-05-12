@@ -33,6 +33,7 @@ A comprehensive web-based platform designed to enhance the academic experience f
 ## Tech Stack
 
 ### Frontend
+
 - **Next.js** - React framework for server-rendered applications
 - **TypeScript** - Type-safe JavaScript
 - **Tailwind CSS** - Utility-first CSS framework
@@ -52,12 +53,14 @@ A comprehensive web-based platform designed to enhance the academic experience f
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/90-Days-of-Coding/sms-frontend.git
    cd student-management-system
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
@@ -101,26 +104,32 @@ We welcome contributions from the community! Please follow these guidelines to e
 ### Branch Workflow
 
 1. **Always create a new branch** for your work:
+
    ```bash
    git checkout -b feat/add-student-profile
    ```
+
    or for bug fixes:
+
    ```bash
    git checkout -b fix/attendance-date-calculation
    ```
 
 2. **Naming conventions** for branches:
+
    - Feature branches: `feat/description` (e.g., `feat/student-dashboard`)
    - Bug fixes: `fix/description` (e.g., `fix/login-validation`)
    - Documentation: `docs/description` (e.g., `docs/contributing-guide`)
    - Chores: `chore/description` (e.g., `chore/dependency-update`)
 
 3. **Push your branch** to the remote repository:
+
    ```bash
    git push origin your-branch-name
    ```
 
 4. **Create a Pull Request (PR)** from your branch to `main`:
+
    - Go to GitHub repository > Pull Requests > New Pull Request
    - Select `main` as base branch and your branch as compare branch
    - Follow the PR template (if available)
@@ -129,13 +138,16 @@ We welcome contributions from the community! Please follow these guidelines to e
 5. **Never push directly to `main` branch** - all changes must go through PR review.
 
 ### PR Approval Process
+
 1. Two approved reviews required before merging
 2. All CI checks and test must pass
 3. Resolve all code review comments before merging
 4. Squash merge preferred (maintains clean commit history)
 
 ### Syncing Your Branch
+
 If your branch falls behind `main`:
+
 ```bash
 git checkout main
 git pull origin main
@@ -158,19 +170,23 @@ We follow [Conventional Commits](https://www.conventionalcommits.org/) specifica
 ```
 
 **Examples:**
+
 ```
 feat: add student profile page
 ```
+
 ```
 fix(attendance): correct date calculation in attendance report
 
 Closes #123
 ```
+
 ```
 docs: update contribution guidelines
 ```
 
 **Common commit types:**
+
 - `feat`: A new feature
 - `fix`: A bug fix
 - `docs`: Documentation changes
@@ -183,7 +199,7 @@ docs: update contribution guidelines
 ### Code Quality Standards
 
 1. **Type Safety**: Always use TypeScript types properly. Avoid `any` type.
-2. **Component Design**: 
+2. **Component Design**:
    - Keep components small and focused (Single Responsibility Principle)
    - Use descriptive prop names and provide proper TypeScript interfaces
 3. **Styling**:
