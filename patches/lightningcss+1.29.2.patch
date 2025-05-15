@@ -1,0 +1,26 @@
+diff --git a/node_modules/lightningcss/node/index.js b/node_modules/lightningcss/node/index.js
+index 011d04b..6f641fa 100644
+--- a/node_modules/lightningcss/node/index.js
++++ b/node_modules/lightningcss/node/index.js
+@@ -16,10 +16,20 @@ if (process.platform === 'linux') {
+ if (process.env.CSS_TRANSFORMER_WASM) {
+   module.exports = require(`../pkg`);
+ } else {
+-  try {
++  {/*try {
+     module.exports = require(`lightningcss-${parts.join('-')}`);
+   } catch (err) {
+     module.exports = require(`../lightningcss.${parts.join('-')}.node`);
++  }*/}
++    try {
++    module.exports = require(`lightningcss-${parts.join('-')}`);
++  } catch (err) {
++    try {
++      module.exports = require(`../lightningcss.linux-x64-gnu.node`);
++    } catch (err2) {
++      console.warn('Failed to load native lightningcss binary:', err2.message);
++      module.exports = {}; // prevent crash
++    }
+   }
+ }
+ 
