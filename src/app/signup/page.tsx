@@ -32,7 +32,7 @@ export default function SignupPage() {
                 <label className="label">
                   <span className="label-text">First Name</span>
                 </label>
-                <input type="text" placeholder="John" className="input input-bordered w-full" required />
+                <input type="text" placeholder="Sarah" className="input input-bordered w-full" required />
               </div>
 
               <div className="form-control">
@@ -47,7 +47,7 @@ export default function SignupPage() {
               <label className="label">
                 <span className="label-text">Student ID</span>
               </label>
-              <input type="text" placeholder="STU12345" className="input input-bordered w-full" required />
+              <input type="text" placeholder="CPP/123/45" className="input input-bordered w-full" required />
             </div>
 
             <div className="form-control">
