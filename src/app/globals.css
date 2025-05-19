@@ -18,5 +18,20 @@ Do not define styles here, or perform any changes without any of the admins perm
   --text-lg: '1.5rem';
   --text-xl: '2rem';
   --text-2xl: 'calc(1.5rem + 1vw)';
+}
 
+[data-theme='dark'] {
+  .renderer {
+    background-image: linear-gradient(to bottom, #0e0a1d, #050009);
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+[data-theme='light'] {
+  .renderer {
+    width: 100vw;
+    background-color: snow;
+    height: 100vh;
+  }
 }
