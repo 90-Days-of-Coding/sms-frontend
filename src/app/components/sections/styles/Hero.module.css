@@ -1,0 +1,37 @@
+.theme {
+    /* Primary Colors (Backgrounds & Surfaces) */
+    --color-background-darkest: #151226;
+    /* Darker & deeper for immersive UI */
+    --color-background-secondary: #1E2433;
+    --color-background-tertiary: #2C3348;
+
+    /* Accent Color (Blue - Calm, Trust, Tech) */
+    --color-accent-blue-primary: #3D8BFF;
+    /* Slightly brighter for vibrancy */
+    --color-accent-blue-light: #9CCBFF;
+    --color-accent-blue-dark: #2763BA;
+
+    /* Tertiary Accent Colors (From 3D shapes in your image) */
+    --color-accent-orange: #ff4500;
+    --color-accent-green: #33d13b;
+    --color-accent-red: #ff1313;
+    --color-accent-yellow: #ffbf00;
+
+    /* Text Colors */
+    --color-text-primary: #fffafa;
+    --color-text-secondary: #BFC5D2;
+    --color-text-muted: #8A8FA6;
+
+    /* Neutral / Utility Colors */
+    --color-neutral-gray-subtle: #2b2f3d;
+    --color-neutral-gray-divider: #5A617A;
+
+    /* Status Colors */
+    --color-status-success: #00c351;
+    --color-status-warning: #ffb92e;
+    --color-status-error: #ff1900;
+
+    /* Additional Utility */
+    --color-glow-blue: #3d8bff4d;
+    --color-glow-orange: #f95f3f33;
+}

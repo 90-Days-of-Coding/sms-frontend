@@ -7,31 +7,20 @@ Do not define styles here, or perform any changes without any of the admins perm
 
 /* theming */
 @plugin "daisyui" {
-  themes: winter --default, black --prefersdark;
+  themes: winter --default, winter --prefersdark;
 }
 
 @theme {
-
   --text-base: '1rem';
   --text-sm: '1.25rem';
   --text-md: '1.75rem';
   --text-lg: '1.5rem';
   --text-xl: '2rem';
   --text-2xl: 'calc(1.5rem + 1vw)';
+  --font-mont: "var(--font-mont),sans-serif"
 }
 
-[data-theme='dark'] {
-  .renderer {
-    background-image: linear-gradient(to bottom, #0e0a1d, #050009);
-    width: 100vw;
-    height: 100vh;
-  }
-}
-
-[data-theme='light'] {
-  .renderer {
-    width: 100vw;
-    background-color: snow;
-    height: 100vh;
-  }
+.hero {
+  font-family: var(--font-mont);
+  font-weight: 700;
 }
