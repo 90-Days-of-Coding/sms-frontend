@@ -5,6 +5,7 @@ import { useGLTF } from "@react-three/drei";
 import { SpherePoints } from "../../types/types";
 import { useSprings, a, useSpring } from "@react-spring/three";
 import * as THREE from "three";
+import { useSceneStore } from "@/store/useSceneStore";
 
 // 1) Create a typed wrapper for a.primitive so TS doesn’t try to expand its insanely deep types
 const AnimatedPrimitive = a.primitive as unknown as React.ComponentType<
@@ -33,6 +34,8 @@ export default function ExplosionGroup({
     (Math.random() * 2 - 1) * 0.2,
   ];
 
+  const setAnimationDone = useSceneStore((state) => state.setAnimationDone);
+
   /**
    * INSTANCE ANIMATION
    */
@@ -40,6 +43,7 @@ export default function ExplosionGroup({
   const [springs, api] = useSprings(points.length, () => ({
     position: initial, //starting point
     rotation: [0, 0, 0],
+    // onRest: () => setAnimationDone(true),
   }));
 
   useEffect(() => {
@@ -54,11 +58,15 @@ export default function ExplosionGroup({
       return {
         position: target,
         rotation: rotation,
-        delay: 220,
+        delay: 200,
         config: { mass: 1, tension: 80, friction: 35 },
       };
     });
-  }, [api, points]);
+
+    setTimeout(() => {
+      setAnimationDone(true);
+    }, 500);
+  }, [api, points, setAnimationDone]);
 
   /**
    * GROUP ANIMATION
@@ -69,7 +77,7 @@ export default function ExplosionGroup({
 
   useEffect(() => {
     gApi.start({
-      rotation: [0, 2 * Math.PI, 0],
+      rotation: [0, -2.2 * Math.PI, 0],
       config: {
         mass: 1,
         tension: 20,

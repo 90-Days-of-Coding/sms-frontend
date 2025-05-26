@@ -33,6 +33,7 @@ const Renderer = () => {
     <Canvas
       className={styles.renderer}
       camera={{ position: [0, 0, 4], fov: 45 }}
+      dpr={[1, 1.5]}
     >
       <Environment
         files={"/hdri/city.hdr"}

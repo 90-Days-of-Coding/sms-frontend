@@ -7,7 +7,7 @@ Do not define styles here, or perform any changes without any of the admins perm
 
 /* theming */
 @plugin "daisyui" {
-  themes: winter --default, winter --prefersdark;
+  themes: winter --default, night --prefersdark;
 }
 
 @theme {
