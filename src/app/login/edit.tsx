@@ -1,8 +1,10 @@
 "use client"
 
 import type React from "react"
+
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Eye, EyeOff } from "lucide-react"
 
 export default function LoginPage() {
@@ -10,17 +12,33 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    // Handle login logic here
     console.log("Login submitted")
   }
 
   return (
-    <div
-      className="min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: "url('/login.png')" }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-        <div className="w-full max-w-md bg-base-100/80 p-8 rounded-lg shadow-lg">
+    <div className="min-h-screen flex flex-col md:flex-row bg-base-100">
+      {/* Image Section */}
+      <div className="flex-1 relative hidden md:block">
+        <Image
+          src="/login.png"
+          alt="Student studying"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-primary/20 flex items-center justify-center">
+          <div className="text-center p-8 bg-base-100/80 rounded-lg max-w-md">
+            <h2 className="text-2xl font-bold text-primary mb-2">Welcome Back!</h2>
+            <p className="text-base-content">Access your academic dashboard and continue your learning journey.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Form Section */}
+      <div className="flex-1 flex items-center justify-center p-6">
+        <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-primary">Login</h1>
             <p className="mt-2 text-base-content/70">Sign in to your account</p>
@@ -92,3 +110,4 @@ export default function LoginPage() {
     </div>
   )
 }
+

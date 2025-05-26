@@ -123,7 +123,7 @@ export default function SignupPage() {
       {/* Image Section */}
       <div className="flex-1 relative hidden md:block order-1 md:order-2">
         <Image
-          src="/login.webp?height=800&width=600"
+          src="/signup.png?height=800&width=600"
           alt="Student in campus"
           fill
           className="object-cover"
