@@ -4,6 +4,13 @@ const StudentDashboard = () => {
   return (
     <div>
 
+      this is the dashboard
+
+      <div>
+        <img src="./" alt="" />
+      </div>
+
+
         
 
 
