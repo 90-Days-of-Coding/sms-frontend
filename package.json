@@ -9,17 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-spring/three": "^10.0.0",
+    "@react-three/drei": "^10.0.7",
+    "@react-three/fiber": "^9.1.2",
     "@tanstack/react-query": "^5.75.7",
+    "@types/three": "^0.176.0",
     "clsx": "^2.1.1",
     "daisyui": "^5.0.35",
-    "lucide-react": "^0.510.0",
+    "leva": "^0.10.0",
     "motion": "^12.10.5",
     "next": "15.3.2",
+    "next-themes": "^0.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
+    "styled-components": "^6.1.18",
+    "three": "^0.176.0",
     "zustand": "^5.0.4"
   },
   "devDependencies": {
@@ -32,7 +39,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
-    "patch-package": "^8.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
