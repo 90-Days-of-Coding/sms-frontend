@@ -1,10 +1,15 @@
+import Nav from '@/StudentComponent/Nav'
 import React from 'react'
+
 
 const StudentDashboard = () => {
   return (
     <div>
 
-      this is the dashboard
+      <div>
+        <Nav/>
+        
+      </div>
 
       <div>
         <img src="./" alt="" />
