@@ -13,12 +13,12 @@ const StudentDashboard = () => {
         
       </div>
 
-      <div>
-        <div>
+      <div className='grid grid-cols-[250px_1fr] w-full    '>
+        <div className='h-full w-full'>
           <SideMain/>
         </div>
 
-        <div>
+        <div className=' bg-[#0A0B0F]/70 h-full w-full'>
         <Main/>
 
         </div>

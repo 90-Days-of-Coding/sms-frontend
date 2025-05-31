@@ -87,15 +87,18 @@ const SideMain = () => {
 
 
   return (
-    <div>
+    <div className='py-3'>
 
-        <div>
+        <div className='flex flex-col gap-4 py-2 px-3  '>
            {datas.map(data=>
+
+           
            
            (
             
-                <div key={data.id} className='flex gap-1 items-center'>
+                <div key={data.id} className='px-3 font-bold hover:text-xl flex gap-3 items-center h-8 hover:bg-[#15161B]/70 hover:h-11 hover:border-l-3 hover:rounded-lg hover:border-blue-700'>
 
+                 
                     <div  >{data.display}</div>
                     <div className='w-13'>{data.description}</div>
 
