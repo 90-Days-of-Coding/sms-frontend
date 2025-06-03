@@ -13,8 +13,8 @@ const StudentDashboard = () => {
         
       </div>
 
-      <div className='grid grid-cols-[200px_1fr] w-full    '>
-        <div className='h-full w-full'>
+      <div className='grid grid-cols-[280px_1fr] w-full    '>
+        <div className='h-full w-full flex justify-center'>
           <SideMain/>
         </div>
 

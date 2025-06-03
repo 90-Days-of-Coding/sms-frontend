@@ -96,7 +96,7 @@ const SideMain = () => {
            
            (
             
-                <div key={data.id} className='px-3 font-extrabold text-sm hover:text-xl flex gap-1 items-center h-8 hover:bg-[#15161B]/70 hover:h-8 hover:border-l-3 hover:rounded-lg hover:border-blue-700'>
+                <div key={data.id} className='px-3 font-extrabold text-sm hover:text-xl flex gap-3 items-center h-12 w-61 hover:bg-[#15161B]/70 hover:h-12 hover:w-61 hover:border-l-4 hover:rounded-lg hover:border-blue-700'>
 
                  
                     <div  >{data.display}</div>

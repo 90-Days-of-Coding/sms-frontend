@@ -6,9 +6,9 @@ import Comment from './FirstSector/Comment'
 
 export default function Firstsect() {
   return (
-    <div>
+    <div className='py-5'>
 
-        <div className='py-5 '>
+        <div className='  '>
           <LiveSec/>
           <Ongoing/>
           <Task/>
