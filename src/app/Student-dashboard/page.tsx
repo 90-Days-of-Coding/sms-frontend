@@ -8,7 +8,7 @@ const StudentDashboard = () => {
   return (
     <div>
 
-      <div className='border-b border-white/20 mx-3 '>
+      <div className='border-b border-white/20 mx-3 md:mx-0 '>
         <Nav/>
         
       </div>

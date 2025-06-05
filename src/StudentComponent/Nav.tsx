@@ -32,7 +32,7 @@ const Nav = () => {
 
 
           <div className=''>
-            <input className='border w-full h-7 rounded-lg px-7 py-3' type="text" name='Search' value={Search} onChange={(e)=>setSearch(e.target.value)} placeholder='Search..' />
+            <input className='border w-full md:w-100 h-7 rounded-lg px-7 py-3' type="text" name='Search' value={Search} onChange={(e)=>setSearch(e.target.value)} placeholder='Search..' />
           </div>
 
 
