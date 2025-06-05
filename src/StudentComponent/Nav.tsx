@@ -7,7 +7,7 @@ const Nav = () => {
   let [Search,setSearch] =useState<string>('')
   return (
     <div>
-        <div className='flex justify-between  items-center mx-14 py-2  z-10 '>
+        <div className='flex justify-between  items-center md:mx-14 py-2  z-10 '>
 
           <div className='flex items-center gap-1.5 '>
             <div>

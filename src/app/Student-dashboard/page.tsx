@@ -8,17 +8,20 @@ const StudentDashboard = () => {
   return (
     <div>
 
-      <div className='border-b border-white/20  '>
+      <div className='border-b border-white/20 mx-3 '>
         <Nav/>
         
       </div>
 
-      <div className='grid grid-cols-[280px_1fr] w-full    '>
+      <div className='grid md:grid-cols-[280px_1fr] w-full     '>
+        <div className=' hidden md:block'>
         <div className='h-full w-full flex justify-center'>
           <SideMain/>
         </div>
 
-        <div className=' bg-[#0A0B0F] h-[94vh]  overflow-hidden w-full'>
+        </div>
+
+        <div className=' bg-[#0A0B0F] md:h-[94vh]  overflow-hidden w-full'>
         <Main/>
 
         </div>

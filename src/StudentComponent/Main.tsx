@@ -9,7 +9,7 @@ const Main = () => {
     <div className='px-4 py-2'>
 
       <div>
-      <div className='text-3xl font-extrabold border py-2 rounded-lg border-white/10 '>
+      <div className='text-3xl font-extrabold border py-2 rounded-lg border-white/10 mx-9 '>
         <Mainhead/>
       </div>
 
@@ -19,7 +19,7 @@ const Main = () => {
       {/* <div className='grid grid-cols-[1fr_300px_1fr] gap-4 h-[94vh]  overflow-scroll hide-scrollbar '> */} 
 
       {/* this one is to unhide it so remove anyone you want  */}
-      <div className='grid grid-cols-[1fr_300px_1fr] gap-4 h-[94vh]  overflow-scroll '>
+      <div className='grid md:grid-cols-[1fr_300px_1fr]  gap-4 md:h-[94vh]  overflow-scroll '>
         <Firstsect/>
         <Secondsect/>
         <Thirdsect/>
