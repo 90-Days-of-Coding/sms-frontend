@@ -25,7 +25,7 @@ export default function Notification() {
   return (
     <div>
 
-        <div className='bg-white/5 px-6 py-2.5 rounded-lg '>
+        <div className='bg-white/5 px-6 py-2.5 border-t border-white/10 rounded-lg '>
             <div >
                 <p  className='text-[1.5rem] font-extrabold '>Notifications</p>
             </div>

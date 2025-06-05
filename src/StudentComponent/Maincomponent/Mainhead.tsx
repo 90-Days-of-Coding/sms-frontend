@@ -2,10 +2,11 @@ import React from 'react'
 
 export default function Mainhead() {
   return (
-    <div className='flex justify-center text-blue-600/80  '>
+    <div className='flex justify-center  '>
 
         <div>
-            <p className=' underline'>Welcome to your Dashboard</p>
+            <p className=''>Welcome to your Dashboard</p>
+            
         </div>
     
 

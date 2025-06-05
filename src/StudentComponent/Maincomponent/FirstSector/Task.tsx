@@ -28,46 +28,29 @@ export default function Task() {
                  {datas.length !== 0 ?
                  <div>
                     {datas.map(data=>
-                    
-                   
-                   
-                    <div key={data.id} className='font-bold '>
-                       
 
+                           
+      <div key={data.id} className=' bg-white/10 h-fit rounded-lg px-4 py-4 my-2'>
+                
 
+                
+                <div className='flex gap-2 items-center justify-between  '>
+                <div className='flex gap-2 items-center'>
+                <p className='size-2 bg-blue-700 rounded-3xl'></p>
+                <p className='font-bold'>Review lecture notes</p>
 
-
-                       
-                        <div className='flex justify-between items-center'>
-                        <div className='flex items-center  gap-2 '>
+                </div>
+                  <div>
+                    <p>15</p>
+                </div>
+                </div>
+                <p className='text-white/20'>Lecture Netespall</p>
 
                 
 
-                        <div className='size-2 bg-blue-600 rounded-4xl flex items-start'>
-                            
-                        </div>
+              
 
-                        <div className='text-2xl py-2'>
-                        {data.des}
-                         <div className='text-xs'>{data.details}</div>
-
-                        </div>
-                        </div>
-
-                        <div>
-                            <input type="radio" name="" id="" />
-                        </div>
-
-
-                        </div>
-                     
-
-
-
-                       
-
-                    </div>
-                      
+        </div>
 
                     
                   

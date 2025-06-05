@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Messages() {
   return (
-    <div className='bg-white/5 rounded-lg'>
+    <div className='bg-white/5 rounded-lg border-t border-white/10'>
 
-        <div className='mx-6 py-4' >
+        <div className='mx-6 py-4 '  >
             <div className='flex justify-between items-center'>
                 <div>
                    <p className='text-[1.5rem] font-extrabold'>Messages</p> 

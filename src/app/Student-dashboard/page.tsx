@@ -18,7 +18,7 @@ const StudentDashboard = () => {
           <SideMain/>
         </div>
 
-        <div className=' bg-[#0A0B0F] h-[94vh]  overflow-scroll w-full'>
+        <div className=' bg-[#0A0B0F] h-[94vh]  overflow-hidden w-full'>
         <Main/>
 
         </div>

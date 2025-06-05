@@ -24,3 +24,12 @@ Do not define styles here, or perform any changes without any of the admins perm
   font-family: var(--font-mont);
   font-weight: 700;
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

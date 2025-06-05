@@ -1,5 +1,8 @@
 import React from 'react'
 import Messages from './Thirdsector/Messages'
+import Grades from './Thirdsector/Grades'
+import Marketplace from './Thirdsector/Marketplace'
+
 
 export default function Thirdsect() {
   return (
@@ -7,6 +10,9 @@ export default function Thirdsect() {
 
         <div>
             <Messages/>
+            <Grades/>
+            <Marketplace/>
+            
         </div>
       
     </div>

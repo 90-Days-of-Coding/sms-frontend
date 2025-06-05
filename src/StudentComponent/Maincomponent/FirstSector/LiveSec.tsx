@@ -19,7 +19,7 @@ export default function LiveSec() {
 
 
   return (
-    <div className='bg-[#0A0B0D] relative border border-white/5  rounded-lg'>
+    <div className='bg-[#0A0B0D] relative border border-white/10  rounded-lg'>
 
          <div className='relative flex justify-start pl-5 text-[1.5rem] left-2 top-2 font-extrabold h-0 z-20'>Live class schedule</div>
 
