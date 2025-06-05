@@ -5,7 +5,7 @@ export default function Mainhead() {
     <div className='flex justify-center  '>
 
         <div>
-            <p className=''>Welcome to your Dashboard</p>
+            <p className='whitespace-nowrap'>Welcome to your Dashboard</p>
             
         </div>
     
