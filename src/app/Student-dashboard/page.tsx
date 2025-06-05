@@ -21,7 +21,7 @@ const StudentDashboard = () => {
 
         </div>
 
-        <div className=' bg-[#0A0B0F] md:h-[94vh]  overflow-hidden w-full'>
+        <div className=' bg-[#0A0B0F] md:h-[94vh]  md:overflow-hidden w-full'>
         <Main/>
 
         </div>
