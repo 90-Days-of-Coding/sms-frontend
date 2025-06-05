@@ -9,7 +9,7 @@ const Main = () => {
     <div className='px-4 py-2'>
 
       <div>
-      <div className='md:text-3xl text-2xl font-extrabold border py-2 rounded-lg border-white/10 mx-9 '>
+      <div className='md:text-3xl text-2xl md:mx-0 font-extrabold border py-2 rounded-lg border-white/10 mx-9 '>
         <Mainhead/>
       </div>
 
