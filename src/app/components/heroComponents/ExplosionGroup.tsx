@@ -82,6 +82,7 @@ export default function ExplosionGroup({
     >
       {springs.map((spr, i) => {
         const clone = scene.clone() as THREE.Object3D;
+
         return (
           <AnimatedPrimitive
             key={i}

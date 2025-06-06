@@ -11,17 +11,9 @@ import styles from "./styles/Renderer.module.css";
 
 const Renderer = () => {
   const instanceCount = 9;
-  const models = [
-    "luxury_pen.glb",
-    "cube.glb",
-    "torus.glb",
-    "cone.glb",
-    "pencil.glb",
-    "book.glb",
-    "laptop.glb",
-  ];
-  const scale = [1, 0.2, 0.15, 0.15, 1, 1, 1];
-  const radius = 0.3;
+  const models = ["cube.glb", "torus.glb", "cone.glb", "diamond.glb"];
+  const scale = [0.2, 0.2, 0.15, 0.15, 0.12];
+  const radius = 0.4;
 
   const points: SpherePoints[][] = useGeneratePoints(
     instanceCount * models.length,
@@ -48,7 +40,7 @@ const Renderer = () => {
 
       <Suspense fallback={null}>
         <MouseControlledGroup>
-          <Stars />
+          <Stars factor={2} />
           {models.map((model, i) => {
             return (
               <ExplosionGroup
