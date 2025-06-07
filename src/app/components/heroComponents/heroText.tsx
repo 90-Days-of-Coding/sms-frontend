@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../ui/get-started";
 import clsx from "clsx";
-import styles from "./styles/heroText.module.css";
 import TextAnimation from "./textAnimation";
 
 const HeroText = () => {
@@ -9,21 +8,26 @@ const HeroText = () => {
     <>
       <div
         className={clsx(
-          `${styles.heroText} absolute flex flex-col items-start gap-4 overflow-hidden bottom-10 left-0 font-mont w-[60%] pl-14 pb-4`
+          `text-[var(--foreground)] w-[55%] h-full absolute flex flex-col justify-end items-start gap-4 bottom-20 left-0 pl-14`
         )}
       >
         <TextAnimation
-          text="Where Learning Takes Shape"
-          className="text-[3.5rem] font-[700]"
+          text="Where learning takes shape"
+          className="text-[4rem] w-full font-[300] font-roboto"
           delay={0}
-          gap="1rem"
+          lh={0.8}
+          gap="1.2rem"
         />
+        <div className="w-full p-1"></div>
         <TextAnimation
-          text="Engineered for ease. Built for students."
-          className="text-[1.3rem] font-[200]"
+          text="Decks streamlines academic management, keeping you from burning out.
+          "
+          className="text-[1.3rem] font-roboto w-[85%] text-gray-300 font-[300]"
           delay={0.5}
           gap=".55rem"
+          lh={1.1}
         />
+        <div className="w-full pb-1"></div>
         <Button />
       </div>
     </>

@@ -35,7 +35,7 @@ const Renderer = () => {
 
       <ambientLight intensity={0.5} color={0xffffff} />
 
-      <directionalLight position={[5, 5, 5]} intensity={2} color={0xaac} />
+      <directionalLight position={[3, -4, 4]} intensity={2} color={0xaac} />
       <directionalLight position={[-3, 4, -4]} intensity={2} color={0xaac} />
 
       <Suspense fallback={null}>

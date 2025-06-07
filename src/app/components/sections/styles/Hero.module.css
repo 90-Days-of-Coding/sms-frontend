@@ -1,30 +1,16 @@
 .theme {
     /* Primary Colors (Backgrounds & Surfaces) */
-    --color-background-darkest: #151226;
-    /* Darker & deeper for immersive UI */
-    --color-background-secondary: #1E2433;
-    --color-background-tertiary: #2C3348;
+    --background: #151226;
+    --foreground: #fcfcfc;
 
-    /* Accent Color (Blue - Calm, Trust, Tech) */
-    --color-accent-blue-primary: #3D8BFF;
-    /* Slightly brighter for vibrancy */
-    --color-accent-blue-light: #9CCBFF;
-    --color-accent-blue-dark: #2763BA;
+    /* --card: #1a1a1a; */
 
-    /* Tertiary Accent Colors (From 3D shapes in your image) */
-    --color-accent-orange: #ff4500;
-    --color-accent-green: #33d13b;
-    --color-accent-red: #ff1313;
-    --color-accent-yellow: #ffbf00;
+    --primary: #3627ba;
+    --primary-foreground: #5c51b9;
 
-    /* Text Colors */
-    --color-text-primary: #fffafa;
-    --color-text-secondary: #BFC5D2;
-    --color-text-muted: #8A8FA6;
+    --secondary: #2c3545;
 
-    /* Neutral / Utility Colors */
-    --color-neutral-gray-subtle: #2b2f3d;
-    --color-neutral-gray-divider: #5A617A;
+    --accent: #ff4500;
 
     /* Status Colors */
     --color-status-success: #00c351;

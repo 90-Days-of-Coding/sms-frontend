@@ -1,0 +1,10 @@
+.login:hover {
+
+    .arrow {
+        rotate: 360deg;
+    }
+}
+
+.arrow, .login {
+    transition: all .3s ease-out;
+}

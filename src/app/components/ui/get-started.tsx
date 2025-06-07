@@ -1,54 +1,45 @@
 "use client";
 
 import { useSceneStore } from "@/store/useSceneStore";
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
+import { animated, useSpring, config } from "@react-spring/web";
 import React from "react";
 import styled from "styled-components";
 
 const Button = () => {
   const animationDone = useSceneStore((state) => state.animationDone);
+  const spring = useSpring({
+    from: { opacity: 0, y: 20 },
+    to: {
+      opacity: animationDone ? 1 : 0,
+      y: animationDone ? 0 : 20,
+    },
+    delay: 1000, // Convert delay from seconds to ms
+    config: config.gentle,
+  });
 
   return (
     <StyledWrapper>
-      <motion.button
-        className="get-started flex items-center font-mont font-[500] text-[.85rem] px-3 py-3 border-none rounded-xl relative shadow-[0_0_1.5em_-.3em] shadow-[#3d8bff4d] hover:shadow-[#f95e3f6b] active:scale-90"
-        initial={{
-          opacity: 0,
-          x: 70,
-        }}
-        animate={
-          animationDone
-            ? {
-                opacity: 1,
-                x: 0,
-              }
-            : {}
-        }
-        transition={{
-          ease: "easeOut",
-          delay: 1,
-        }}
+      <animated.button
+        style={spring}
+        className="get-started flex items-center font-roboto font-[400] text-[1rem] px-4 py-4 border-none rounded-xl relative shadow-[0_0_1.5em_-.3em] shadow-[#3627ba] hover:shadow-[#3d8bff] active:scale-90"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 32 32"
-          className="w-[1.3rem] h-[1.3rem] rocket transition-transform mr-2 fill-[var(--color-text-primary)]"
+          className="w-[1.3rem] h-[1.3rem] rocket transition-transform mr-2 fill-[var(--foreground)]"
         >
           <path d="M23.371 29.529c0 0 0.335-2.012-1.731-4.469 2.011-5.641 2.29-10.778 2.29-10.778s4.133 0.95 4.133 5.026c-0.001 6.981-4.692 10.221-4.692 10.221zM11.979 27.078c0 0-2.768-8.883-2.768-12.568 0-1.658 0.187-3.133 0.478-4.472h12.61c0.293 1.34 0.481 2.816 0.481 4.473 0 3.629-2.76 12.567-2.76 12.567h-8.041zM15.99 12.069c-1.418 0-2.568 1.15-2.568 2.569 0 1.418 1.15 2.569 2.568 2.569s2.569-1.15 2.569-2.569c0.001-1.419-1.15-2.569-2.569-2.569zM15.438 0.596v-3.498h1v3.409c1.143 0.832 4.236 3.478 5.635 8.575h-12.16c1.352-4.957 4.296-7.574 5.525-8.486zM8.629 29.529c0 0-4.691-3.24-4.691-10.221 0-4.076 4.133-5.026 4.133-5.026s0.279 5.137 2.289 10.778c-2.067 2.458-1.731 4.469-1.731 4.469zM17.691 30.045l-0.838-0.838-0.893 2.793-1.062-2.793-0.726 1.451-1.062-2.625h5.752l-1.171 2.012z" />
         </svg>
         <span>GET STARTED</span>
-      </motion.button>
+      </animated.button>
     </StyledWrapper>
   );
 };
 
 const StyledWrapper = styled.div`
   .get-started {
-    background: linear-gradient(
-      135deg,
-      var(--color-accent-blue-primary),
-      var(--color-accent-red)
-    );
+    background-color: var(--primary);
     letter-spacing: 0.05em;
     color: white;
     cursor: pointer;
