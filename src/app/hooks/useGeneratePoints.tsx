@@ -1,5 +1,6 @@
-import { SpherePoints } from "../types/types";
 import { useMemo } from "react";
+import * as THREE from "three";
+import { SpherePoints } from "../types/types";
 
 const chunkArray = (
   array: SpherePoints[],
@@ -14,8 +15,9 @@ const chunkArray = (
 
 export const useGeneratePoints = (
   count: number,
-  radius: number,
-  instances: number
+  baseRadius: number,
+  instances: number,
+  spread = 3 // explosion energy multiplier
 ): SpherePoints[][] => {
   return useMemo(() => {
     const points: SpherePoints[] = [];
@@ -23,24 +25,27 @@ export const useGeneratePoints = (
     let tries = 0;
 
     while (points.length < count && tries < maxTries) {
-      const theta = Math.random() * 2 * Math.PI;
-      const phi = Math.acos(Math.random() * 2 - 1);
-      const r = Math.random() * 3 + radius; // optional spread around origin
+      // Use spherical coords
+      const spherical = new THREE.Spherical();
+      spherical.radius = baseRadius + spread * Math.pow(Math.random(), 0.5); // bias outward
+      spherical.theta = Math.random() * Math.PI * 2; // around Y axis
+      spherical.phi = Math.acos(2 * Math.random() - 1); // vertical angle
 
-      const x = r * Math.cos(phi) * Math.cos(theta);
-      const y = r * Math.sin(phi) * Math.sin(theta);
-      const z = r * Math.cos(phi);
+      const pos = new THREE.Vector3().setFromSpherical(spherical);
+
+      // More explosive = looser distance check
+      const minDistance = baseRadius * 1.5;
 
       const tooClose = points.some(({ position: [px, py, pz] }) => {
-        const dx = x - px;
-        const dy = y - py;
-        const dz = z - pz;
-        return Math.sqrt(dx * dx + dy * dy + dz * dz) < radius * 2;
+        const dx = pos.x - px;
+        const dy = pos.y - py;
+        const dz = pos.z - pz;
+        return Math.sqrt(dx * dx + dy * dy + dz * dz) < minDistance;
       });
 
       if (!tooClose) {
         points.push({
-          position: [x, y, z],
+          position: [pos.x, pos.y, pos.z],
         });
       }
 
@@ -48,10 +53,12 @@ export const useGeneratePoints = (
     }
 
     if (tries >= maxTries) {
-      console.warn("Max attempts reached, may not have placed all points.");
+      console.warn(
+        "Max attempts reached, fewer points generated:",
+        points.length
+      );
     }
 
-    const chunks = chunkArray(points, instances);
-    return chunks;
-  }, [count, radius, instances]);
+    return chunkArray(points, instances);
+  }, [count, baseRadius, instances, spread]);
 };

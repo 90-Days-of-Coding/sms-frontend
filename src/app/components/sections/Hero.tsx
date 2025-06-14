@@ -1,14 +1,14 @@
 import React from "react";
 import Renderer from "../heroComponents/Renderer";
-import HeroText from "../heroComponents/heroText";
+import HeroText from "../heroComponents/HeroText";
 import Navbar from "../heroComponents/Navbar";
-import styles from "./styles/Hero.module.css";
+import styles from "./styles/section.module.css";
 import clsx from "clsx";
 
 const Hero = () => {
   return (
-    <div className={clsx("h-screen", styles.theme)}>
-      <div className={`relative w-full h-full `}>
+    <div className={clsx("h-screen hero", styles.theme)}>
+      <div className={`relative w-screen h-full `}>
         <Renderer />
         <Navbar />
         <HeroText />

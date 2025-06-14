@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../ui/get-started";
 import clsx from "clsx";
-import TextAnimation from "./textAnimation";
+import TextAnimation from "../ui/textAnimation";
 
 const HeroText = () => {
   return (

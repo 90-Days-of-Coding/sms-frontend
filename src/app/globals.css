@@ -18,10 +18,6 @@ Do not define styles here, or perform any changes without any of the admins perm
   --text-xl: '2rem';
   --text-2xl: 'calc(1.5rem + 1vw)';
   --font-roboto: "var(--font-roboto),serif";
-  --font-slab: "var(--font-slab),sans-serif"
-}
 
-.hero {
-  font-family: var(--font-mont);
-  font-weight: 700;
+
 }

@@ -1,0 +1,13 @@
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate {
+    animation: spin 40s .7s linear infinite;
+}
+
+.counter {
+    animation: spin 40s .7s linear reverse infinite;
+}

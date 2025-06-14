@@ -1,6 +1,7 @@
 .theme {
     /* Primary Colors (Backgrounds & Surfaces) */
-    --background: #151226;
+    --background: #050a1a;
+
     --foreground: #fcfcfc;
 
     /* --card: #1a1a1a; */
@@ -8,7 +9,7 @@
     --primary: #3627ba;
     --primary-foreground: #5c51b9;
 
-    --secondary: #2c3545;
+    --secondary: #475670;
 
     --accent: #ff4500;
 

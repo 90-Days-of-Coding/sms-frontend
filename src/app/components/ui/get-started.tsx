@@ -22,7 +22,8 @@ const Button = () => {
     <StyledWrapper>
       <animated.button
         style={spring}
-        className="get-started flex items-center font-roboto font-[400] text-[1rem] px-4 py-4 border-none rounded-xl relative shadow-[0_0_1.5em_-.3em] shadow-[#3627ba] hover:shadow-[#3d8bff] active:scale-90"
+        className="get-started flex items-center font-roboto font-[400] text-[1rem] px-4 py-4 border-none rounded-xl relative shadow-[0_0_1.5em_-.3em] shadow-[#3627ba] hover:shadow-[#3d8bff]
+        active:shadow-[#3d8bff] active:scale-90"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -52,10 +53,6 @@ const StyledWrapper = styled.div`
     .rocket {
       rotate: 45deg;
     }
-  }
-
-  .get-started:active {
-    box-shadow: 0 0.3em 1.5em -0.7em #f95e3fab;
   }
 
   .get-started::before {

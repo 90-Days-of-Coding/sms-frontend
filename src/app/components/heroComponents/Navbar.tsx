@@ -29,11 +29,11 @@ const Navbar = () => {
             src="/images/logo.png"
             width={150}
             height={135}
-            className=""
+            priority
           />
         </div>
         <div>
-          <ul className="menu menu-horizontal gap-5 text-[1rem] text-[var(--color-text-primary)] pr-10">
+          <div className="menu menu-horizontal gap-5 text-[var(--foreground)] pr-10 ">
             <motion.li
               variants={word}
               initial="hidden"
@@ -42,7 +42,7 @@ const Navbar = () => {
                 duration: 0.5,
                 delay: 0.6,
               }}
-              className="text-[1.2rem] px-4 py-2 rounded-2xl"
+              className="text-[1.2rem] px-4 py-2 rounded-2xl active:text-[var(--primary)] hover:text-[var(--secondary)] hover:scale-110 active:scale-90 border-1 border-[var(--primary)] transition-color transition-transform cursor-pointer"
             >
               Sign In
             </motion.li>
@@ -55,7 +55,7 @@ const Navbar = () => {
                 delay: 0.9,
               }}
               className={clsx(
-                "text-[1.2rem] bg-[var(--primary)] px-6 py-2 rounded-full shadow-[0_0_10px_2px] shadow-[#3627ba] hover:shadow-[#3627ba] hover:shadow-[0_0_25px_5px] transition-shadow"
+                "text-[1.2rem] bg-[var(--primary)] px-6 py-2 rounded-full shadow-[0_0_10px_2px] shadow-[#3627ba] hover:shadow-[#3627ba] hover:shadow-[0_0_25px_5px] transition-shadow active:scale-90 cursor-pointer"
               )}
             >
               <span className=""> Log In</span>
@@ -66,7 +66,7 @@ const Navbar = () => {
                 )}
               />
             </motion.div>
-          </ul>
+          </div>
         </div>
       </nav>
     </div>

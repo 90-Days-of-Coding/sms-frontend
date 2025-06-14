@@ -12,9 +12,9 @@ const MouseControlledGroup = ({ children }: { children: React.ReactNode }) => {
   const [pointer, setPointer] = useState<point>({ x: 0, y: 0 });
 
   useEffect(() => {
-    window.addEventListener("mousemove", (event) => {
-      const x = event.clientX;
-      const y = event.clientY;
+    document.querySelector(".hero")?.addEventListener("mousemove", (event) => {
+      const x = (event as MouseEvent).clientX;
+      const y = (event as MouseEvent).clientY;
 
       //Normalization
       const ndcx = (x / window.innerWidth) * 2 - 1;
@@ -24,16 +24,18 @@ const MouseControlledGroup = ({ children }: { children: React.ReactNode }) => {
     });
 
     return () => {
-      window.removeEventListener("mousemove", (event) => {
-        const x = event.clientX;
-        const y = event.clientY;
+      document
+        .querySelector(".hero")
+        ?.removeEventListener("mousemove", (event) => {
+          const x = (event as MouseEvent).clientX;
+          const y = (event as MouseEvent).clientY;
 
-        //Normalization
-        const ndcx = (x / window.innerWidth) * 2 - 1;
-        const ndcy = -(y / window.innerHeight) * 2 + 1;
+          //Normalization
+          const ndcx = (x / window.innerWidth) * 2 - 1;
+          const ndcy = -(y / window.innerHeight) * 2 + 1;
 
-        setPointer({ x: ndcx, y: ndcy });
-      });
+          setPointer({ x: ndcx, y: ndcy });
+        });
     };
   }, []);
 
@@ -54,8 +56,10 @@ const MouseControlledGroup = ({ children }: { children: React.ReactNode }) => {
     groupRef.current.rotation.x +=
       (targetX - groupRef.current.rotation.x) * damping;
   });
+
+  const position = new THREE.Vector3(1, 0, 0);
   return (
-    <group ref={groupRef} position={[1, 0, 0]}>
+    <group ref={groupRef} position={position}>
       {children}
     </group>
   );

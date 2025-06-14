@@ -9,12 +9,13 @@ import { useGeneratePoints } from "../../hooks/useGeneratePoints";
 import { SpherePoints } from "../../types/types";
 import styles from "./styles/Renderer.module.css";
 
-const Renderer = () => {
-  const instanceCount = 9;
-  const models = ["cube.glb", "torus.glb", "cone.glb", "diamond.glb"];
-  const scale = [0.2, 0.2, 0.15, 0.15, 0.12];
-  const radius = 0.4;
+const instanceCount = 9;
 
+const models = ["cube.glb", "torus.glb", "cone.glb", "diamond.glb"];
+const scales: number[] = [0.2, 0.2, 0.15, 0.15];
+const radius = 0.4;
+
+const Renderer: React.FC = () => {
   const points: SpherePoints[][] = useGeneratePoints(
     instanceCount * models.length,
     radius,
@@ -25,35 +26,35 @@ const Renderer = () => {
     <Canvas
       className={styles.renderer}
       camera={{ position: [0, 0, 4], fov: 45 }}
-      dpr={[1, 1.5]}
+      dpr={
+        typeof window !== "undefined"
+          ? Math.min(window.devicePixelRatio, 2)
+          : 1.5
+      }
     >
       <Environment
-        files={"/hdri/city.hdr"}
-        environmentIntensity={0.3}
+        files="/hdri/city.hdr"
         backgroundRotation={Math.PI / 2}
+        environmentIntensity={0.3}
       />
 
-      <ambientLight intensity={0.5} color={0xffffff} />
-
-      <directionalLight position={[3, -4, 4]} intensity={2} color={0xaac} />
-      <directionalLight position={[-3, 4, -4]} intensity={2} color={0xaac} />
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[3, -4, 4]} intensity={1} color={0xaac} />
+      <directionalLight position={[-3, 4, -4]} intensity={1} color={0xaac} />
 
       <Suspense fallback={null}>
         <MouseControlledGroup>
           <Stars factor={2} />
-          {models.map((model, i) => {
-            return (
-              <ExplosionGroup
-                key={i}
-                modelPath={`model/${model}`}
-                scale={scale[i]}
-                points={points[i]}
-              />
-            );
-          })}
+          {models.map((model, i) => (
+            <ExplosionGroup
+              key={model}
+              modelPath={`model/${model}`}
+              scale={scales[i] ?? 0.15}
+              points={points[i] ?? []}
+            />
+          ))}
         </MouseControlledGroup>
       </Suspense>
-      {/* <OrbitControls /> */}
     </Canvas>
   );
 };

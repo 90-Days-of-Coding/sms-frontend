@@ -25,18 +25,6 @@ const roboto = localFont({
   display: "swap",
 });
 
-const slab = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Slab.ttf",
-      style: "normal",
-    },
-  ],
-  weight: "200",
-  variable: "--font-slab",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: "Decks - Engineered for ease. Built for students",
   description: "A student management system tailored to just students",
@@ -50,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${roboto.variable} ${slab.variable} ${geistMono.variable} antialiased text-base sm:text-sm lg:text-lg xl:text-xl 2xl:text-2xl md:text-md`}
+        className={`${geistSans.variable} ${roboto.variable} ${geistMono.variable} antialiased text-base sm:text-sm lg:text-lg xl:text-xl 2xl:text-2xl md:text-md overflow-x-clip`}
       >
         <ThemeProviderWrapper>{children}</ThemeProviderWrapper>
       </body>
