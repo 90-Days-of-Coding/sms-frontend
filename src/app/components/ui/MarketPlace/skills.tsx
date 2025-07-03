@@ -16,13 +16,13 @@ const Skills = ({
   animationDone: boolean;
 }) => {
   const icons = [
-    <MdFunctions key={0} size={50} />,
-    <FaPenNib key={1} size={50} />,
-    <FaPalette key={2} size={50} />,
-    <FaCode key={3} size={50} />,
-    <MdVideoLibrary key={4} size={50} />,
-    <FaHashtag key={5} size={50} />,
-    <GiSkills key={6} size={50} />,
+    <MdFunctions key={0} size={20} />,
+    <FaPenNib key={1} size={20} />,
+    <FaPalette key={2} size={20} />,
+    <FaCode key={3} size={20} />,
+    <MdVideoLibrary key={4} size={20} />,
+    <FaHashtag key={5} size={20} />,
+    <GiSkills key={6} size={20} />,
   ];
 
   const pos = [

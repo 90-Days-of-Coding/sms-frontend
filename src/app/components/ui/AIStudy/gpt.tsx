@@ -35,10 +35,8 @@ const Gpt = ({
       <animated.div style={style}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="256"
-          height="256"
           viewBox="0 0 256 256"
-          className="w-[40rem] h-[40rem] drop-shadow-[0_0_25px] drop-shadow-[#3627ba]"
+          className="w-[30rem] h-[30rem] drop-shadow-[0_0_25px] drop-shadow-[#3627ba]"
         >
           <path
             fill="#3627ba"

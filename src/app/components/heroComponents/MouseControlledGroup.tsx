@@ -10,6 +10,8 @@ type point = { x: number; y: number };
 const MouseControlledGroup = ({ children }: { children: React.ReactNode }) => {
   const groupRef = useRef<THREE.Group>(null!);
   const [pointer, setPointer] = useState<point>({ x: 0, y: 0 });
+  const desktop = useRef<boolean>(false);
+  const position = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 0));
 
   useEffect(() => {
     document.querySelector(".hero")?.addEventListener("mousemove", (event) => {
@@ -57,9 +59,15 @@ const MouseControlledGroup = ({ children }: { children: React.ReactNode }) => {
       (targetX - groupRef.current.rotation.x) * damping;
   });
 
-  const position = new THREE.Vector3(1, 0, 0);
+  desktop.current = window.innerWidth >= 1024;
+  if (desktop.current) {
+    position.current = new THREE.Vector3(1, 0, 0);
+  } else {
+    position.current = new THREE.Vector3(0, 0, -3);
+  }
+
   return (
-    <group ref={groupRef} position={position}>
+    <group ref={groupRef} position={position.current}>
       {children}
     </group>
   );

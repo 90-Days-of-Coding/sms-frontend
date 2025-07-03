@@ -16,9 +16,11 @@ import {
 const Cloud = ({
   animationDone,
   view,
+  size,
 }: {
   animationDone: boolean;
   view: boolean;
+  size: string;
 }) => {
   const n = 5;
   const radiusPercent = 40; // as percentage of container
@@ -29,35 +31,35 @@ const Cloud = ({
       <FaFileDownload
         color="#3627ba"
         key="3"
-        size="5vw"
+        size={size}
         className="drop-shadow-[0_0_25px] drop-shadow-[#3627ba]"
       />,
       <FaFilePdf
         color="#3627ba"
         key="0"
-        size="5vw"
+        size={size}
         className="drop-shadow-[0_0_25px] drop-shadow-[#3627ba]"
       />,
       <FaFileVideo
         color="#3627ba"
         key="1"
-        size="5vw"
+        size={size}
         className="drop-shadow-[0_0_25px] drop-shadow-[#3627ba]"
       />,
       <FaFileUpload
         color="#3627ba"
         key="2"
-        size="5vw"
+        size={size}
         className="drop-shadow-[0_0_25px] drop-shadow-[#3627ba]"
       />,
       <FaFileAudio
         color="#3627ba"
         key="4"
-        size="5vw"
+        size={size}
         className="drop-shadow-[0_0_25px] drop-shadow-[#3627ba]"
       />,
     ],
-    []
+    [size]
   );
 
   //Calculates new positions
@@ -93,8 +95,8 @@ const Cloud = ({
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <FaCloud
           color="#3627ba"
-          size="10vw"
-          className=" drop-shadow-[0_0_25px] drop-shadow-[#3627ba]"
+          size={size}
+          className=" scale-150 drop-shadow-[0_0_25px] drop-shadow-[#3627ba]"
         />
       </div>
 

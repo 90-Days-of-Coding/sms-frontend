@@ -9,8 +9,6 @@ const ClockIcon = ({
   view: boolean;
   animationDone: boolean;
 }) => {
-  console.log(view);
-
   const [spring, api] = useSpring(() => ({
     opacity: 0,
     scale: 0,
@@ -27,8 +25,8 @@ const ClockIcon = ({
   });
 
   return (
-    <animated.div style={spring}>
-      <FaRegClock size={40} />
+    <animated.div style={spring} className="md:scale-130">
+      <FaRegClock size={30} />
     </animated.div>
   );
 };

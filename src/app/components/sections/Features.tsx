@@ -9,7 +9,12 @@ import Marketplace from "../featuresComponents/Marketplace";
 
 const Features = () => {
   return (
-    <div className={clsx(styles.theme, "bg-[var(--background)] p-16")}>
+    <div
+      className={clsx(
+        styles.theme,
+        "bg-[var(--background)] py-16 pl-6 pr-3 md:p-16"
+      )}
+    >
       <ClassSchedule />
       <CourseMaterials />
       <AiStudy />

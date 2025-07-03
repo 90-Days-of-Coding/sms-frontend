@@ -1,6 +1,6 @@
 "use client";
 
-import { FaTwitter, FaGithub, FaLinkedin, FaHeart } from "react-icons/fa";
+import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 import clsx from "clsx";
 import TextAnimation from "./ui/textAnimation";
@@ -21,12 +21,12 @@ export function Footer() {
   return (
     <footer
       className={clsx(
-        "bg-[#020211] border-t border-gray-800 py-8 p-10 transition-colors duration-300 w-full font-roboto",
+        "bg-[#020211] border-t border-gray-800 transition-colors duration-300 w-full font-roboto",
         styles.theme
       )}
       ref={ref}
     >
-      <div className=" p-8 pb-0">
+      <div className="pt-8 md:pt-10 md:pl-9">
         <Image
           alt="Decks logo"
           src="/images/logo.png"
@@ -36,24 +36,25 @@ export function Footer() {
         />
       </div>
 
-      <div></div>
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center p-8 py-16 px-16">
-          <div className="w-[35%] text-[1.5rem] font-[200]">
+      <div className="">
+        <div className="flex flex-col lg:flex-row justify-between items-center py-10 px-8 md:p-16 lg:gap-7">
+          <div className="w-full text-[1.2rem] font-[200] mb-6 md:text-[2rem] lg:text-[2.3rem] lg:w-[50%]">
             <TextAnimation
-              text="Decks is your go-to student management system, designed to streamline academic life and help you avoid burnout. We provide the tools you need to stay organized, focused and on top of your studies."
+              text="Decks provide the tools you need to stay organized, avoid burnout, focused and on top of your studies."
               gap=".8rem"
               execute={view}
-              className="mb-6"
+              className="mb-6 md:mb-9"
             />
-            <Button />
+            <div className="scale-90 md:scale-70 xl:scale-105 flex w-full justify-center items-center">
+              <Button />
+            </div>
           </div>
 
-          <div className="flex flex-col justify-end items-center gap-6">
-            <div className="flex flex-col gap-5 text-[1.5rem]">
+          <div className="flex md:flex-col justify-end items-end md:items-center gap-6 mt-7">
+            <div className="flex lg:flex-col gap-3 text-[1.2rem] md:text-[1.5rem] lg:text-[1.7rem]">
               <a
                 href="#"
-                className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                className="text-sm  text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
               >
                 <TextAnimation
                   text="Privacy Policy"
@@ -64,7 +65,7 @@ export function Footer() {
               </a>
               <a
                 href="#"
-                className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                className="text-sm  text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
               >
                 <TextAnimation
                   text="Terms of Service"
@@ -86,7 +87,7 @@ export function Footer() {
               </a>
             </div>
 
-            <div className="flex gap-5">
+            <div className="flex gap-5 md:gap-13">
               <motion.a
                 initial={{ opacity: 0, y: -20 }}
                 animate={{
@@ -98,7 +99,7 @@ export function Footer() {
                   delay: 0,
                 }}
                 href="#"
-                className="text-gray-600 hover:text-blue-400 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+                className="text-gray-600 hover:text-blue-400 dark:text-gray-400 dark:hover:text-blue-400 transition-colors md:scale-160"
                 aria-label="Twitter"
               >
                 <FaTwitter size={20} />
@@ -114,7 +115,7 @@ export function Footer() {
                   delay: 0.3,
                 }}
                 href="#"
-                className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
+                className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors md:scale-160"
                 aria-label="GitHub"
               >
                 <FaGithub size={20} />
@@ -130,7 +131,7 @@ export function Footer() {
                   delay: 0.6,
                 }}
                 href="#"
-                className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-500 transition-colors"
+                className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-500 transition-colors md:scale-160"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={20} />
@@ -142,12 +143,12 @@ export function Footer() {
         <hr />
 
         {/* Left section */}
-        <div className="flex flex-col items-center text-center gap-2 mt-12">
-          <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left">
+        <div className="flex flex-col items-center text-center gap-2 mt-6 pb-8">
+          <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-[1.1rem] lg:text-[1.57rem]">
             © {new Date().getFullYear()} Your Company. All rights reserved.
           </p>
-          <p className="text-xs text-gray-500 dark:text-gray-500 flex items-center">
-            Made with <FaHeart className="mx-1 text-red-500" /> by our team
+          <p className="text-sm text-gray-500 dark:text-gray-500 flex items-center md:text-[1.1rem] lg:text-[1.5rem]">
+            Made with 💖 by our team
           </p>
         </div>
       </div>

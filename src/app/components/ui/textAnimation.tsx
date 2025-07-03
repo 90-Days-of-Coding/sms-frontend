@@ -52,18 +52,23 @@ const TextAnimation: React.FC<AnimatedTextProps> = ({
     <div
       className={className}
       style={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap,
-        lineHeight: lh,
-        flexDirection: "row",
+        display: "inline-block",
         willChange: "transform, opacity",
         transformStyle: "preserve-3d",
         backfaceVisibility: "hidden",
       }}
     >
       {springs.map((style, i) => (
-        <animated.span key={i} style={style} aria-hidden={!show}>
+        <animated.span
+          key={i}
+          style={{
+            ...style,
+            display: "inline-block",
+            marginRight: gap,
+            marginTop: lh,
+          }}
+          aria-hidden={!show}
+        >
           {words[i]}
         </animated.span>
       ))}

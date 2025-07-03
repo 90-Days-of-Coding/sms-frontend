@@ -25,8 +25,8 @@ const Message = ({
   });
 
   return (
-    <animated.div style={spring}>
-      <IoChatboxEllipsesSharp size={50} />
+    <animated.div style={spring} className="translate-y-2 lg:translate-y-0">
+      <IoChatboxEllipsesSharp size={40} />
     </animated.div>
   );
 };

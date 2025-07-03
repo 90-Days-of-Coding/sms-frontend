@@ -1,15 +1,13 @@
 import { animated, useSpring, config } from "@react-spring/web";
 import React, { useEffect } from "react";
 import { CiCloud } from "react-icons/ci";
-const ClockIcon = ({
+const CloudIcon = ({
   view,
   animationDone,
 }: {
   view: boolean;
   animationDone: boolean;
 }) => {
-  console.log(view);
-
   const [spring, api] = useSpring(() => ({
     opacity: 0,
     scale: 0,
@@ -26,10 +24,10 @@ const ClockIcon = ({
   });
 
   return (
-    <animated.div style={spring}>
-      <CiCloud size={70} />
+    <animated.div style={spring} className="z-1 md:scale-150">
+      <CiCloud size={35} strokeWidth={".6px"} />
     </animated.div>
   );
 };
 
-export default ClockIcon;
+export default CloudIcon;

@@ -24,8 +24,11 @@ const Money = ({
   });
 
   return (
-    <animated.div style={spring}>
-      <GiMoneyStack size={50} />
+    <animated.div
+      style={spring}
+      className="translate-y-2 lg:translate-y-0 md:scale-110"
+    >
+      <GiMoneyStack size={40} />
     </animated.div>
   );
 };

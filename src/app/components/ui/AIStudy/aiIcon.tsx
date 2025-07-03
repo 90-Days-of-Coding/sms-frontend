@@ -8,8 +8,6 @@ const AiIcon = ({
   view: boolean;
   animationDone: boolean;
 }) => {
-  console.log(view);
-
   const [spring, api] = useSpring(() => ({
     opacity: 0,
     scale: 0,
@@ -29,10 +27,8 @@ const AiIcon = ({
     <animated.div style={spring}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
         viewBox="0 0 24 24"
-        className="w-14 h-14"
+        className=" w-10 h-10 translate-y-2 md:translate-y-0 md:w-14 md:h-14 z-1"
       >
         <g
           fill="none"

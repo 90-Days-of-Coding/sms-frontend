@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 const Hero = () => {
   return (
-    <div className={clsx("h-screen hero", styles.theme)}>
+    <div className={clsx("min-h-screen hero", styles.theme)}>
       <div className={`relative w-screen h-full `}>
         <Renderer />
         <Navbar />
